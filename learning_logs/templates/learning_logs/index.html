@@ -1,0 +1,21 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+  <div class="jumbotron">
+    <h1>Track your learning.</h1>
+    <p class="lead">
+      Make your own Learning Log, and keep a list of the topics you’re learning about.
+      Whenever you learn something new about a topic, make an entry summarizing what you’ve learned.
+    </p>
+
+    {% if user.is_authenticated %}
+      <a class="btn btn-primary btn-lg" href="{% url 'learning_logs:topics' %}" role="button">
+        View your topics
+      </a>
+    {% else %}
+      <a class="btn btn-primary btn-lg" href="{% url 'users:register' %}" role="button">
+        Register an account
+      </a>
+    {% endif %}
+  </div>
+{% endblock content %}
