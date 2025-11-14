@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-0k_x*x1-$gz%8l$!*x_g*-e)#(03k^13!u$la&_jlnvnn&xh74
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['learning-log-v9n4.onrender.com', '127.0.0.1', 'localhost']
+
+
 
 
 # Application definition
@@ -127,7 +129,6 @@ import dj_database_url
 
 STATIC_URL = 'static/'
 
-# Add this line to tell Django where your static folder is
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
 
