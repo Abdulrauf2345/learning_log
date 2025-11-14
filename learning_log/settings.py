@@ -127,12 +127,14 @@ USE_TZ = True
 import os 
 import dj_database_url
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [BASE_DIR / 'static']
-
+STATICFILES_DIRS = [
+    BASE_DIR / 'learning_logs' / 'static'
+]
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
